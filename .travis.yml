@@ -4,7 +4,12 @@ jdk:
 
 before_install:
   - chmod +x gradlew
-  
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
 script:
   - gradle check
   - gradle assemble
